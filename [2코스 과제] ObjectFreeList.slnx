@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="[2코스 과제] ObjectFreeList/[2코스 과제] ObjectFreeList.vcxproj" />
+</Solution>
