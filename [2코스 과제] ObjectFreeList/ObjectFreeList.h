@@ -35,11 +35,6 @@ public:
 
 	~ObjectFreeList()
 	{
-		// freeList만 돌아서 삭제.
-		// 할당해간 블록은 삭제하지 않을 예정. 
-		// 만약 할당해간 블록까지 삭제했다가 그 객체에 무슨값이 들어가서 무슨 로직이 돌지 모르니 무서움.
-		// 차라리 메모리 누수로 둔다.
-
 		Node<T>* curr = freeList;
 		for (int i = 0; i < _capacity - _size; i++)
 		{
@@ -72,8 +67,8 @@ public:
 		freeList = freeList->next;
 		_size++;
 
-		if (_placementNew)
-			new((void*)ret) T;
+		//if (_placementNew)
+		//	new((void*)ret) T;
 
 		return ret;
 	}
@@ -87,8 +82,8 @@ public:
 		freeList = reinterpret_cast<Node<T>*>(ptr);
 		_size--;
 
-		if (_placementNew)
-			ptr->~T();
+		//if (_placementNew)
+		//	ptr->~T();
 
 		return true;
 	}

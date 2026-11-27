@@ -13,12 +13,9 @@ struct Test
 
 int main()
 {
-	ObjectFreeList<Test> list(100, true);
+	ObjectFreeList<Test> list(100, false);
 
-	for (int i = 0; i < 100; i++)
-	{
-		Test* ptr = list.alloc();
-	}
+	Test* ptr = list.alloc();
 
 	return 0;
 }
