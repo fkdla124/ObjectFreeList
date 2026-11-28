@@ -26,7 +26,7 @@ int main()
 	{
 		PROFILE_SCOPE("ObjectFreeList.alloc()");
 		Test* ptr = list.alloc();
-		list.free(ptr);
+		list.free(ptr); 
 	}
 	
 	for (int i = 0; i < 10000000; i++)

@@ -201,7 +201,7 @@ public:
 
 	bool free(T* ptr)
 	{
-		if (ptr == nullptr)
+		if (ptr == nullptr) 
 			return false;
 
 		// 가드체크
